@@ -47,8 +47,8 @@ def queue_message(message):
 	print(message)
 
 ########## NEED TO GET THIS STUFF FROM YAML FILE #########################
-	credentials = pika.PlainCredentials('lisa', 'rencia7fr0g')
-	parameters = pika.ConnectionParameters('asgs-monitor.edc.renci.org', 5672, '/', credentials, socket_timeout=2)
+	credentials = pika.PlainCredentials('user', 'password')
+	parameters = pika.ConnectionParameters('hostname', 5672, '/', credentials, socket_timeout=2)
 	connection = pika.BlockingConnection(parameters)
 	channel = connection.channel()
 	channel.queue_declare(queue="asgs_queue")
