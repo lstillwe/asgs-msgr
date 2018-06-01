@@ -8,7 +8,7 @@ JSON message format:
 
 {
    name: asgs
-   physical_location:
+   physical_location: RENCI
    cluster_name: hatteras
    date-time: 2018-01-01 12:00:00
    message: This message is to let you know that the ASGS has been ACTIVATED using NAM forcing on the $GRIDFILE mesh.
