@@ -37,7 +37,7 @@ def JsonifyMessage(LocationName,
 	
 	msg_obj = {'name': 'asgs', 'physical_location': LocationName, 'clustername': ClusterName, 'date-time': UTCDateTime, 'message': Message, 'event_type': EventType, 'process': Process, 'pctcomplete': PctComplete, 'state': State, 'storm': StormName, 'storm_number': StormNumber, 'advisory_number': AdvisoryNumber}
 
-	return json.dumps(main_obj)
+	return json.dumps(msg_obj)
 
 
 def queue_message(message):
@@ -111,7 +111,7 @@ def main(argv):
 			StormNumber, 
 			AdvisoryNumber, 
 			Message, 
-			MessageType,
+			EventType,
                         Process,
                         PctComplete,
                         State
